@@ -1,280 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Project Team</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, black, #555);
-      color: white;
+      background: linear-gradient(to bottom, white, #ddd);
+      color: #222;
     }
-    /* Navbar styles */
+
     nav {
-      background-color: #333;
+      background-color: #f8f8f8;
       padding: 10px;
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    
+
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
       margin: 0;
       padding: 0;
-      align-items: center; /* Align items vertically in the center */
+      align-items: center;
     }
-    
+
     nav ul li {
       margin: 0 15px;
     }
-    
+
     nav ul li a {
-      color: white;
+      color: #333;
       text-decoration: none;
       font-size: 16px;
     }
-    
+
     nav ul li a:hover {
-      color: #aaa;
+      color: #007bff;
     }
-    
-    /* GitHub button styling */
+
     .github-btn {
-      background-color: grey;
+      background-color: #a91101;
       display: inline-block;
       padding: 10px 20px;
       color: white;
       border-radius: 5px;
       text-decoration: none;
-      margin-top: 0;
     }
-    
+
     .github-btn:hover {
-      background-color: brown;
+      background-color: #c0c0c0;
     }
 
     .container {
       max-width: 1200px;
-      margin: 50px auto;
+      margin: 80px auto 20px;
       padding: 20px;
     }
-    .text-start {
-      text-align: left;
-    }
+
     .card {
-      background-color: #333;
+      background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       display: flex;
-      overflow: hidden;
       margin-bottom: 20px;
+      overflow: hidden;
     }
+
     .card img {
       width: 150px;
       height: 150px;
       object-fit: cover;
       border-radius: 10px;
+      margin: 10px;
     }
+
     .card-body {
-      padding: 20px;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+
     a {
       text-decoration: none;
-      color: white;
+      color: #007bff;
     }
+
     a:hover {
-      color: #aaa;
+      color: #0056b3;
     }
+
     .logbook-btn {
-      margin-top: 10px;
-      display: inline-block;
-      padding: 10px 15px;
-      background-color: #555;
+      width: 140px;           /* Fixed width */
+      height: 40px;           /* Fixed height */
+      line-height: 40px;      /* Vertically center text */
+      text-align: center;     /* Horizontally center text */
+      padding: 0;             /* Remove padding since we're using fixed height/line-height */
+      background-color: #a91101;
       color: white;
       border-radius: 5px;
       border: none;
       cursor: pointer;
       font-size: 14px;
-      text-decoration: none;
+      font-weight: bold;
     }
+
     .logbook-btn:hover {
-      background-color: #777;
+      background-color: #e0e0e0;
+      color: #a91101;
+    }
+
+    h3, h5 {
+      margin-top: 40px;
+      color: #222;
+    }
+
+    .responsive-google-docs iframe {
+      width: 100%;
+      border: none;
+      .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.doc-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-5px);
+}
+
+.doc-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.doc-card h6 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.doc-card p {
+  margin-bottom: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#projectspecification">Project Specification</a></li>
-      <li><a href="#projectsanalysis">Analysis and Requirement</a></li>
-      <li><a href="#projectteam">Project Team</a></li>
-      <li><a href="#demopresentation">Demo Presentation</a></li>
-      <li><a href="https://github.com/VeritasNews" target="_blank" class="github-btn">View on GitHub</a></li>
-    </ul>
-  </nav>  
+<nav>
+  <ul>
+    <li>
+      <a href="/">
+        <img src="./assets/set2_no_bg.png" alt="Project Logo" style="height: 40px; vertical-align: middle; margin-right: 20px;">
+      </a>
+    </li>
+    <li><a href="#projectspecification">Project Specification</a></li>
+    <li><a href="#projectsanalysis">Analysis and Requirement</a></li>
+    <li><a href="#projectteam">Project Team</a></li>
+    <li><a href="#demopresentation">Demo Presentation</a></li>
+    <li><a href="#designreport">Design Report</a></li>
+    <li><a href="#finalreport">Final Report</a></li>
+    <li><a href="#finaldemo">Final Demo</a></li>
+    <li><a href="https://github.com/VeritasNews" target="_blank" class="github-btn">View on GitHub</a></li>
+  </ul>
+</nav>
 
-  <section class="pb-5 position-relative" id="projectteam">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 text-start mb-5 mt-5">
-          <h3 class="z-index-1 position-relative">The Project Team</h3>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Project Team -->
+    <section id="projectteam">
+<div style="text-align: center; margin-bottom: 30px; border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 10px 0;">
+  <div style="font-size: 48px; font-weight: bold; color: #b30000; font-family: 'Georgia', serif;">
+    Veritas
+  </div>
+  <div id="veritas-date" style="font-size: 18px; color: #555; margin-top: 5px;">
+    <!-- Date will be inserted here -->
+  </div>
+</div>
+
+<script>
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString('en-US', options);
+  const parts = formattedDate.split(', ');
+  const day = parts[0];
+  const date = parts[1];
+  document.getElementById('veritas-date').innerHTML = `${day} &nbsp; • &nbsp; ${date}`;
+</script>
+
+
+      <h3>The Project Team</h3>
+            <div class="card">
+        <a href="https://www.linkedin.com/in/zeynep-dellal-961764201/" target="_blank">
+          <img src="./assets/zeynep.jpeg" alt="Zeynep Doğa Dellal">
+        </a>
+        <div class="card-body">
+          <h5>Zeynep Doğa Dellal</h5>
+          <a class="logbook-btn" href="https://docs.google.com/document/d/1icOG8iVn5-TOaBh-YeSdc_-tCnOM3y4DavrfU4jdYHo/preview" target="_blank">Logbook</a>
         </div>
       </div>
 
-      <div class="row">
-        <!-- Barkın Saday -->
-        <div class="col-lg-6 col-12">
-          <div class="card">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a href="https://www.linkedin.com/in/barkın-saday-2b9599232/" target="_blank">
-                <img class="w-100" src="./assets/barkin.jpg" alt="Barkın Saday">
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body">
-                <h5 class="mb-0">Barkın Saday</h5>
-                <!-- <a class="logbook-btn" href="" target="_blank">Logbook</a> -->
-              </div>
-            </div>
-          </div>
-        </div>
+     <div class="card">
+        <a href="https://www.linkedin.com/in/yağızberkuyar/" target="_blank">
+          <img src="./assets/yagiz.jpeg" alt="Yağız Berk Uyar">
+        </a>
+        <div class="card-body">
+          <h5>Yağız Berk Uyar</h5>
+          <a class="logbook-btn" href="https://docs.google.com/document/d/1tmuVtb33UEezn_E50-3yQmdAzENfLStWXRcp5c8UC_k/preview" target="_blank">Logbook</a>
 
-        <!-- Mithat Emre Gürbüz -->
-        <div class="col-lg-6 col-12">
-          <div class="card">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a href="https://www.linkedin.com/in/mithat-emre-gurbuz-b155791b4/" target="_blank">
-                <img class="w-100" src="./assets/emre.jpg" alt="Mithat Emre Gürbüz">
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body">
-                <h5 class="mb-0">Mithat Emre Gürbüz</h5>
-                <!-- <a class="logbook-btn" href="" target="_blank">Logbook</a> -->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <!-- Yusuf Özyer -->
-        <div class="col-lg-6 col-12">
-          <div class="card">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a href="https://www.linkedin.com/in/yusuf-özyer-b6026822a/" target="_blank">
-                <img class="w-100" src="./assets/yusuf.jpeg" alt="Yusuf Özyer">
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body">
-                <h5 class="mb-0">Yusuf Özyer</h5>
-                <!-- <a class="logbook-btn" href="" target="_blank">Logbook</a> -->
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Yağız Berk Uyar -->
-        <div class="col-lg-6 col-12">
-          <div class="card">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a href="https://www.linkedin.com/in/yağızberkuyar/" target="_blank">
-                <img class="w-100" src="./assets/yagiz.jpeg" alt="Yağız Berk Uyar">
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body">
-                <h5 class="mb-0">Yağız Berk Uyar</h5>
-                <a class="logbook-btn" href="https://docs.google.com/document/d/1tmuVtb33UEezn_E50-3yQmdAzENfLStWXRcp5c8UC_k/preview" target="_blank">Logbook</a> 
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <a href="https://www.linkedin.com/in/barkın-saday-2b9599232/" target="_blank">
+          <img src="./assets/barkin.jpg" alt="Barkın Saday">
+        </a>
+        <div class="card-body">
+          <h5>Barkın Saday</h5>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <!-- Zeynep Doğa Dellal -->
-        <div class="col-lg-6 col-12">
-          <div class="card">
-            <div class="col-lg-4 col-md-6 col-12 mt-n5">
-              <a href="https://www.linkedin.com/in/zeynep-dellal-961764201/" target="_blank">
-                <img class="w-100" src="./assets/zeynep.jpeg" alt="Zeynep Doğa Dellal">
-              </a>
-            </div>
-            <div class="col-lg-8 col-md-6 col-12 my-auto">
-              <div class="card-body">
-                <h5 class="mb-0">Zeynep Doğa Dellal</h5>
-                <a class="logbook-btn" href="https://docs.google.com/document/d/1icOG8iVn5-TOaBh-YeSdc_-tCnOM3y4DavrfU4jdYHo/preview" target="_blank">Logbook</a>
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <a href="https://www.linkedin.com/in/mithat-emre-gurbuz-b155791b4/" target="_blank">
+          <img src="./assets/emre.jpg" alt="Mithat Emre Gürbüz">
+        </a>
+        <div class="card-body">
+          <h5>Mithat Emre Gürbüz</h5>
         </div>
       </div>
 
-      <section id="projectspecification" class="mt-5">
-        <div class="row section-intro">
-          <div class="col-twelve">
-            <h5>Project Specification Document</h5>
-            <div class="responsive-google-docs">
-              <iframe 
-                src="https://docs.google.com/document/d/1UtLPAPz2NL5m0Aru5ilSyZ4Vs6zHbwIegfWc3PTfVJI/preview" 
-                frameborder="0" 
-                width="100%" 
-                height="600" 
-                allowfullscreen="true" 
-                mozallowfullscreen="true" 
-                webkitallowfullscreen="true">
-              </iframe>
-            </div>
-          </div>         
+      <div class="card">
+        <a href="https://www.linkedin.com/in/yusuf-özyer-b6026822a/" target="_blank">
+          <img src="./assets/yusuf.jpeg" alt="Yusuf Özyer">
+        </a>
+        <div class="card-body">
+          <h5>Yusuf Özyer</h5>
         </div>
-      </section>
+      </div>
 
-      <section id="projectsanalysis" class="mt-5">
-        <div class="row section-intro">
-          <div class="col-twelve">
-            <h5>Analysis and Requirement Report</h5>
-            <div class="responsive-google-docs">
-              <iframe 
-                src="https://docs.google.com/document/d/174HV56WQ9bo2VPRjQdH1ohWWcbUBCx5VjQb3UNa6x-g/preview" 
-                frameborder="0" 
-                width="100%" 
-                height="600" 
-                allowfullscreen="true" 
-                mozallowfullscreen="true" 
-                webkitallowfullscreen="true">
-              </iframe>
-            </div>
-          </div>         
-        </div>
-      </section>
-      <section id="demopresentation" class="mt-5">
-        <div class="row section-intro">
-          <div class="col-twelve">
-            <h5>Demo Presentation</h5>
-            <div class="responsive-google-docs">
-              <iframe 
-                src="https://drive.google.com/file/d/155ELn7I2-8bK8mvvoIMs2inBMjO93kRg/preview" 
-                frameborder="0" 
-                width="100%" 
-                height="600" 
-                allowfullscreen="true" 
-                mozallowfullscreen="true" 
-                webkitallowfullscreen="true">
-              </iframe>
-            </div>
-          </div>         
-        </div>
-      </section>
-    </div>
-  </section>
+ 
+    </section>
+
+    <!-- Project Specification -->
+    <section id="projectspecification">
+      <h5>Project Specification Document</h5>
+      <div class="responsive-google-docs">
+        <iframe 
+          src="https://docs.google.com/document/d/1UtLPAPz2NL5m0Aru5ilSyZ4Vs6zHbwIegfWc3PTfVJI/preview"
+          height="600"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Analysis and Requirement -->
+    <section id="projectsanalysis">
+      <h5>Analysis and Requirement Report</h5>
+      <div class="responsive-google-docs">
+        <iframe 
+          src="https://docs.google.com/document/d/174HV56WQ9bo2VPRjQdH1ohWWcbUBCx5VjQb3UNa6x-g/preview"
+          height="600"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Demo Presentation -->
+    <section id="demopresentation">
+      <h5>Demo Presentation</h5>
+      <div class="responsive-google-docs">
+        <iframe 
+          src="https://drive.google.com/file/d/155ELn7I2-8bK8mvvoIMs2inBMjO93kRg/preview"
+          height="600"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+
+
+    <!-- Demo Presentation -->
+    <section id="designreport">
+      <h5>Detailed Design Report</h5>
+      <div class="responsive-google-docs">
+        <iframe 
+          src="https://docs.google.com/document/d/1wFGmVHf1_ylwPVlICkrDzT-Xk3NYVZWjYbKHpRLm3lI/preview"
+          height="600"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Demo Presentation -->
+    <section id="finalreport">
+      <h5>Final Report</h5>
+      <div class="responsive-google-docs">
+        <iframe 
+          src="https://docs.google.com/document/d/1hNm_WmK_x0SQOLDkcz7AzvWDXiAzodUq9KNW14Vmqv4/preview"
+          height="600"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+        <!-- Demo Presentation -->
+    <section id="finaldemo">
+      <h5>Final Demo Presentation</h5>
+      <div class="responsive-google-docs">
+        <iframe 
+          src="https://drive.google.com/file/d/19V-ywc3vf79JEJWFAs6H7ApZu7sNN4XB/preview"
+          height="600"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
