@@ -22,6 +22,7 @@
 /* Navbar container spacing and border */
 .nav-container {
   max-width: 1200px;
+  position: relative;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -110,7 +111,7 @@ nav ul li a:hover {
   /* Hide nav menu by default */
   nav ul {
     position: absolute;
-    top: 15px; /* Below navbar */
+    top: 65px; /* Below navbar */
     right: 0;
     background: #f8f8f8;
     flex-direction: column;
@@ -520,9 +521,26 @@ nav ul li a:hover {
     const date = parts[1];
     document.getElementById('veritas-date').innerHTML = `${day} &nbsp; • &nbsp; ${date}`;
     
-    // Mobile menu toggle
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-      document.getElementById('nav-menu').classList.toggle('show');
+    // Mobile menu elements
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    // Toggle menu when clicking the hamburger icon
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent the click from bubbling to document
+      navMenu.classList.toggle('show');
+    });
+    
+    // Prevent menu from closing when clicking inside the menu
+    navMenu.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevents the click from bubbling to document
+    });
+    
+    // Close menu when clicking anywhere outside the menu
+    document.addEventListener('click', function() {
+      if (navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+      }
     });
     
     // Close menu when clicking a menu item (for mobile)
@@ -530,9 +548,16 @@ nav ul li a:hover {
     menuItems.forEach(item => {
       item.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
-          document.getElementById('nav-menu').classList.remove('show');
+          navMenu.classList.remove('show');
         }
       });
+    });
+    
+    // Close menu when pressing the escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+      }
     });
     
     // Smooth scrolling for anchor links
